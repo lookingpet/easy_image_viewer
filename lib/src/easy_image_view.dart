@@ -83,6 +83,7 @@ class _EasyImageViewState extends State<EasyImageView> with SingleTickerProvider
 
     if (_transformationController.value != Matrix4.identity()) {
       _animationController.reverse();
+      _transformationController.value = _mapAnimation.value;
     } else {
       _animationController.forward();
     }
